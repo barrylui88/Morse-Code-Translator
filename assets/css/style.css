@@ -1,0 +1,40 @@
+:root {
+    /* Colour Palette */
+    --dark-green: #61892F;
+    --light-green: #86C232;
+    --light-black: #222629;
+    --dark-grey: #474B4F;
+    --light-grey: #6B6E70;
+}
+
+body {
+    background-color: #222629;
+}
+
+.custom-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.custom-button {
+    color: white;
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    margin: 10px;
+}
+
+/* .custom-container p {
+    color: white;
+}
+
+.custom-container p span {
+    color: #fff;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid var(--light-green);
+} */
+
+.custom-container h1 {
+    color: var(--light-green);
+}
+

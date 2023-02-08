@@ -7,20 +7,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- CSS Link -->
-  <link rel="stylesheet" href="./assets/css/style.css"/>
+
   <!-- Bootstrap Links -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="./assets/css/style.css"/>
+
   <title>Morse Code Translator</title>
 </head>
 
 <!-- Body Section -->
 <body>
+  <div class="custom-container d-flex flex-column justify-content-center align-items-center text-center">
     <h1>Morse Code Translator</h1>
-    <div>
-        <button>Morse > Letter</button>
-        <button>Letter > Morse</button>
+    <!-- <p>Translate your message to <span class="typewrite" data-period="2000" data-type=`data-type='[ "English", ". -. --. .-.. .. ... ...."]'></span></p> -->
+    <div class="flex-row justify-content-between">
+        <button type="button" class="btn custom-button p-2" href="#">Morse > Letter</button>
+        <button type="button" class="btn custom-button p-2" href="#">Letter > Morse</button>
     </div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -7,6 +7,11 @@
     --light-grey: #6B6E70;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     background-color: #222629;
 }

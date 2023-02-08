@@ -7,7 +7,8 @@
     --light-grey: #6B6E70;
 }
 
-a {
+a,
+a:hover {
     text-decoration: none;
     color: inherit;
 }
@@ -43,3 +44,14 @@ body {
     color: var(--light-green);
 }
 
+.custom-container h1 .morse-title {
+    display: none;
+}
+
+.custom-container h1:hover .letter-title {
+    display: none;
+}
+
+.custom-container h1:hover .morse-title {
+    display: inline;
+}

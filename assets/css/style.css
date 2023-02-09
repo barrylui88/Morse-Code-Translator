@@ -29,19 +29,9 @@ body {
     margin: 10px;
 }
 
-/* .custom-container p {
-    color: white;
-}
-
-.custom-container p span {
-    color: #fff;
-    padding-bottom: 4px;
-    letter-spacing: 1px;
-    border-bottom: 3px solid var(--light-green);
-} */
-
 .custom-container h1 {
     color: var(--light-green);
+    /* font-family: 'Archivo', sans-serif; */
 }
 
 .custom-container h1 .morse-title {
@@ -54,4 +44,14 @@ body {
 
 .custom-container h1:hover .morse-title {
     display: inline;
+}
+
+.custom-container p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.typed {
+    color: var(--light-green);
 }

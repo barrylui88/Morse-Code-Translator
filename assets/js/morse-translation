@@ -1,5 +1,7 @@
-let lettersDemo = "Hello! How, are . you ? Doing@"
-let morseDemo = ".... . .-.. .-.. --- -.-.-- / .... --- .-- --..-- / .- .-. . / .-.-.- / -.-- --- ..- / ..--.. / -.. --- .. -. --. .--.-."
+let lettersDemo = "Hello World!"
+let userLettersInput;
+let morseDemo = ".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--"
+let userMorseInput;
 let lettersInputSplit = [];
 let morseInputSplit = [];
 let translatedOutputArray = [];
@@ -129,11 +131,10 @@ function translationLettersToMorse (lettersInput) {
     console.log(translatedOutput);
 }
 
-translationLettersToMorse(lettersDemo);
+translationLettersToMorse(userLettersInput);
 
 function translationMorseToLetters (morseInput) {
     morseInputSplit = morseInput.split(" ");
-    console.log(morseInputSplit);
     lettersInputSplit = [];
     translatedOutputArray = [];
     translatedOutput = "";
@@ -215,27 +216,27 @@ function translationMorseToLetters (morseInput) {
         } else if (morseInputSplit[i] === "--..--") {
             translatedOutputArray.push(",")
         } else if (morseInputSplit[i] === "?") {
-            translatedOutputArray.push("..--..") // ?
+            translatedOutputArray.push("..--..")
         } else if (morseInputSplit[i] === "\'") {
-            translatedOutputArray.push(".----.") // '
+            translatedOutputArray.push(".----.")
         } else if (morseInputSplit[i] === "!") {
-            translatedOutputArray.push("-.-.--") // !
+            translatedOutputArray.push("-.-.--")
         } else if (morseInputSplit[i] === "(") {
-            translatedOutputArray.push("-.--.") // (
+            translatedOutputArray.push("-.--.")
         } else if (morseInputSplit[i] === ")") {
-            translatedOutputArray.push("-.--.-") // )
+            translatedOutputArray.push("-.--.-")
         } else if (morseInputSplit[i] === "&") {
-            translatedOutputArray.push(".-...") // &
+            translatedOutputArray.push(".-...")
         } else if (morseInputSplit[i] === ":") {
-            translatedOutputArray.push("---...") // :
+            translatedOutputArray.push("---...")
         } else if (morseInputSplit[i] === ";") {
-            translatedOutputArray.push("-.-.-.") // ;
+            translatedOutputArray.push("-.-.-.")
         } else if (morseInputSplit[i] === "=") {
-            translatedOutputArray.push("-...-") // =
+            translatedOutputArray.push("-...-")
         } else if (morseInputSplit[i] === "+") {
-            translatedOutputArray.push(".-.-.") // +
+            translatedOutputArray.push(".-.-.")
         } else if (morseInputSplit[i] === "-") {
-            translatedOutputArray.push("-....-") // -
+            translatedOutputArray.push("-....-")
         } else if (morseInputSplit[i] === "_") {
             translatedOutputArray.push("..--.-")
         } else if (morseInputSplit[i] === "\"") {
@@ -250,9 +251,8 @@ function translationMorseToLetters (morseInput) {
             translatedOutputArray.push("?")
         }
     }
-    console.log(translatedOutputArray);
     translatedOutput = translatedOutputArray.join("");
     console.log(translatedOutput);
 }
 
-translationMorseToLetters(morseDemo);
+translationMorseToLetters(userMorseInput);

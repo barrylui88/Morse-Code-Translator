@@ -1,0 +1,93 @@
+let demo = "Hello my name is Barry"
+let lettersInputSplit =[];
+let translatedOutputLetter;
+let translatedOutputArray = [];
+let translatedOutput;
+
+// Translation Function
+function translationLettersToMorse (lettersInput) {
+    lettersInputSplit = lettersInput.toLowerCase().split("");
+    for (i=0; i<lettersInputSplit.length; i++) {
+        if (lettersInputSplit[i] === "a") {
+            translatedOutputArray.push(".-")
+        } else if (lettersInputSplit[i] === "b") {
+            translatedOutputArray.push("-...")
+        } else if (lettersInputSplit[i] === "c") {
+            translatedOutputArray.push("-.-.")
+        } else if (lettersInputSplit[i] === "d") {
+            translatedOutputArray.push("-..")
+        } else if (lettersInputSplit[i] === "e") {
+            translatedOutputArray.push(".")
+        } else if (lettersInputSplit[i] === "f") {
+            translatedOutputArray.push("..-.")
+        } else if (lettersInputSplit[i] === "g") {
+            translatedOutputArray.push("--.")
+        } else if (lettersInputSplit[i] === "h") {
+            translatedOutputArray.push("....")
+        } else if (lettersInputSplit[i] === "i") {
+            translatedOutputArray.push("..")
+        } else if (lettersInputSplit[i] === "j") {
+            translatedOutputArray.push(".---")
+        } else if (lettersInputSplit[i] === "k") {
+            translatedOutputArray.push("-.-")
+        } else if (lettersInputSplit[i] === "l") {
+            translatedOutputArray.push(".-..")
+        } else if (lettersInputSplit[i] === "m") {
+            translatedOutputArray.push("--")
+        } else if (lettersInputSplit[i] === "n") {
+            translatedOutputArray.push("-.")
+        } else if (lettersInputSplit[i] === "o") {
+            translatedOutputArray.push("---")
+        } else if (lettersInputSplit[i] === "p") {
+            translatedOutputArray.push(".--.")
+        } else if (lettersInputSplit[i] === "q") {
+            translatedOutputArray.push("--.-")
+        } else if (lettersInputSplit[i] === "r") {
+            translatedOutputArray.push(".-.")
+        } else if (lettersInputSplit[i] === "s") {
+            translatedOutputArray.push("...")
+        } else if (lettersInputSplit[i] === "t") {
+            translatedOutputArray.push("-")
+        } else if (lettersInputSplit[i] === "u") {
+            translatedOutputArray.push("..-")
+        } else if (lettersInputSplit[i] === "v") {
+            translatedOutputArray.push("...-")
+        } else if (lettersInputSplit[i] === "w") {
+            translatedOutputArray.push(".--")
+        } else if (lettersInputSplit[i] === "x") {
+            translatedOutputArray.push("-..-")
+        } else if (lettersInputSplit[i] === "y") {
+            translatedOutputArray.push("-.--")
+        } else if (lettersInputSplit[i] === "z") {
+            translatedOutputArray.push("--..")
+        } else if (lettersInputSplit[i] === "1") {
+            translatedOutputArray.push(".----")
+        } else if (lettersInputSplit[i] === "2") {
+            translatedOutputArray.push("..---")
+        } else if (lettersInputSplit[i] === "3") {
+            translatedOutputArray.push("...--")
+        } else if (lettersInputSplit[i] === "4") {
+            translatedOutputArray.push("....-")
+        } else if (lettersInputSplit[i] === "5") {
+            translatedOutputArray.push(".....")
+        } else if (lettersInputSplit[i] === "6") {
+            translatedOutputArray.push("-....")
+        } else if (lettersInputSplit[i] === "7") {
+            translatedOutputArray.push("--...")
+        } else if (lettersInputSplit[i] === "8") {
+            translatedOutputArray.push("---..")
+        } else if (lettersInputSplit[i] === "9") {
+            translatedOutputArray.push("----.")
+        } else if (lettersInputSplit[i] === "0") {
+            translatedOutputArray.push("-----")
+        } else if (lettersInputSplit[i] === " ") {
+            translatedOutputArray.push("/")
+        } else {
+            translatedOutputArray.push("?")
+        }
+    }
+    translatedOutput = translatedOutputArray.join(" ");
+    console.log(translatedOutput);
+}
+
+translationLettersToMorse(demo);

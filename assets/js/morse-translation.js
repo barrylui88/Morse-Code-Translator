@@ -128,7 +128,7 @@ function translationLettersToMorse (lettersInput) {
         }
     }
     translatedOutput = translatedOutputArray.join(" ");
-    console.log(translatedOutput);
+    return translatedOutput;
 }
 
 translationLettersToMorse(userLettersInput);
@@ -252,7 +252,7 @@ function translationMorseToLetters (morseInput) {
         }
     }
     translatedOutput = translatedOutputArray.join("");
-    console.log(translatedOutput);
+    return translatedOutput;
 }
 
 translationMorseToLetters(userMorseInput);

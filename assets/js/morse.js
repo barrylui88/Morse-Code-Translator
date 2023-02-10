@@ -7,3 +7,19 @@ let nextLetterButton = $("#next-letter-input");
 let nextWordButton = $("#next-word-input");
 let saveButton = $("#save-button");
 let clearButton = $("#clear-button");
+
+// JS Variables
+let currentMorseInputArray = [];
+let currentMorseInputString;
+
+// Event Listeners
+dotInputButton.click(function () {
+    currentMorseInputArray.push(".");
+    updateInputBox();
+})
+
+// JavaScript Functions
+function updateInputBox () {
+    currentMorseInputString = currentMorseInputArray.join("");
+    morseInputTextbox.val(currentMorseInputString);
+}

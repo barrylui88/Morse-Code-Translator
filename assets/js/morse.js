@@ -40,6 +40,7 @@ nextWordButton.click(function () {
 
 saveButton.click(function () {
     // SAVE BUTTON FUNCTIONALITY
+    
 })
 
 clearButton.click(function () {

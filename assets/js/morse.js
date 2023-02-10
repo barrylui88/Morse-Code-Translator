@@ -26,6 +26,28 @@ dashInputButton.click(function () {
     updateOutputBox();
 })
 
+nextLetterButton.click(function () {
+    currentMorseInputArray.push(" ");
+    updateInputBox();
+    updateOutputBox();
+})
+
+nextWordButton.click(function () {
+    currentMorseInputArray.push(" / ");
+    updateInputBox();
+    updateOutputBox();
+})
+
+saveButton.click(function () {
+    // SAVE BUTTON FUNCTIONALITY
+})
+
+clearButton.click(function () {
+    currentMorseInputArray = [];
+    updateInputBox();
+    updateOutputBox();
+})
+
 // JavaScript Functions
 function updateInputBox () {
     currentMorseInputString = currentMorseInputArray.join("");

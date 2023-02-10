@@ -1,3 +1,87 @@
+
+const morseText = document.querySelector(".MorseText");
+const textDiv = document.querySelector(".TextDiv");
+const buttonTranslate = document.querySelector(".ButtonTranslate");
+const buttonPlayTranslation = document.querySelector(".PlayTranslation");
+const inputTranslateField = document.querySelector(".InputField");
+const translationText = document.querySelector(".Translation");
+
+
+const array = [];
+const arrayDelays = [];
+let timeStart;
+let timeEnd;
+let betweenTimeStart;
+let betweenTimeEnd;
+
+
+// Replays whatever was pressed on the button.
+const replay = async function () {
+    console.log(...array);
+    console.log(...arrayDelays);
+    // Displays dots/dashes of replay.
+    morseText.textContent = morseCode();
+    textDiv.style.opacity = "100%";
+
+    // Plays from an array that stored dots/dashes and their respective duration.
+    for (let i = 0; i < array.length; i++) {
+        keySound.play();
+        await timer(array[i].slice(1));
+        keySound.stop();
+        await timer(arrayDelays[i + 1]);
+    };
+
+};
+replayKey.addEventListener("click", replay);
+
+// Creates a dot/dash string of the stored clicks.
+let morseCodeString = [];
+const morseCode = function () {
+    for (let i = 0; i < array.length; i++) {
+        morseCodeString.push(array[i][0]);
+    }
+    return morseCodeString.join("")
+};
+
+// Translation button.
+buttonTranslate.addEventListener("click", function () {
+
+    translationText.textContent = "";
+    const message = inputTranslateField.value.toLowerCase();
+
+    translationText.textContent = translateIntoMorse(message);
+    translationText.style.opacity = "100%";
+});
+
+
+// Starts audio reproduction of morse that was translated.
+buttonPlayTranslation.addEventListener("click", function () {
+    playTranslation();
+});
+
+
+//////////// Used for translating into morse. ////////////////
+const alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', " "];
+const morseArray = ['.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..', '.---', '-.-', '.-..', '--', '-.', '---', '.--.', '--.-', '.-.', '...', '-', '..-', '...-', '.--', '-..-', '-.--', '--..', "/"];
+//////////////////////////////////////////////////////////////
+
+// Returns a string of morse code that was translated from the user input.
+const translateIntoMorse = function (message) {
+    const criptedMessage = [];
+
+    for (let i = 0; i < message.length; i++) {
+        let letterNumber = alphabetArray.indexOf(message[i]);
+        //console.log(letterNumber);
+        criptedMessage.push(morseArray[letterNumber])
+    }
+    // console.log(criptedMessage.join("  "));
+    playMessage = criptedMessage.join("  ");
+    return criptedMessage.join("  ");
+};
+
+
+
+
 /// Plays the audio created from text translated into morse code.
 let playMessage;
 const playTranslation = async function () {
@@ -315,4 +399,3 @@ const alphabetList = [
     },
   ];
   
-  export default alphabetList;

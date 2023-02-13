@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style.css"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/letters-to-morse-style.css"/>
+
     <title>Letters to Morse</title>
 </head>
+
 <body>
-    <section class="body">
-        <div>
-            <h1>Morse Code Translator</h1>
-            <h2>Letters to Morse</h2>
-        </div>
-    </section>
-    <section>
-        <div>
-            <textarea>
-
-            </textarea>
-        </div>
-        <div>
-            <textarea>
-
-            </textarea>
-        </div>
-    </section>
-    <section>
-        <div>
-            <button>
-                <h3 class="button">Translate</h3>
-            </button>
-        </div>
-    </section>
+    <div class="custom-container d-flex flex-column justify-content-center align-items-center text-center">
+        <section>
+            <div><button type="button" class="btn back-btn"><a href="./index.html">Back</a></button></div>
+            <div>
+                <h1>Code Translator</h1>
+                <h2>Letters to Morse</h2>
+            </div>
+        </section>
+        <section class="text-box-container">
+            <div>
+                <textarea id="letters-txtbx"></textarea>
+            </div>
+            <div>
+                <textarea id="morse-txtbx"></textarea>
+            </div>
+        </section>
+        <section>
+            <div>
+                <button type="button" class="btn custom-button p-2" id="translate-btn">Translate</button>
+            </div>
+        </section>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -44,5 +47,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+    <script src="./assets/js/morse-translation"></script>
+    <script src="./assets/js/letters.js"></script>
 </body>
 </html>

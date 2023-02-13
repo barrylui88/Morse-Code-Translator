@@ -1,13 +1,24 @@
-let translateBtn = document.getElementById("translate-btn")
+let translateBtn = $("#translate-btn")
 console.log(translateBtn)
 
-let lettersTxtBx = document.getElementById("letters-txtbx")
+let lettersTxtBx = $("#letters-txtbx")
 console.log(lettersTxtBx)
 
-let morseTxtBx = document.getElementById("morse-txtbx")
+let morseTxtBx = $("#morse-txtbx")
 console.log(morseTxtBx)
 
-// Take value from lettersTxtBx
-// Translate 
-// Output into morseTxtBx
+let letters;
 
+// Take value from lettersTxtBx
+function readValue(){
+    return lettersTxtBx.val();
+}
+// Translate 
+translateBtn.click(function(){
+    refreshTxtBx()
+})
+
+// Output into morseTxtBx
+function refreshTxtBx(){
+morseTxtBx.val(translationLettersToMorse(readValue()))
+}

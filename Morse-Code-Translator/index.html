@@ -1,0 +1,43 @@
+<!-- HTML Declaration -->
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<!-- Head Section -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- Bootstrap Links -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Fonts -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet"> -->
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="./assets/css/style.css"/>
+
+  <title>Morse Code Translator</title>
+</head>
+
+<!-- Body Section -->
+<body>
+  <div class="custom-container d-flex flex-column justify-content-center align-items-center text-center">
+    <h1>
+      <span class="letter-title">Morse Code Translator</span>
+      <span class="morse-title">-- --- .-. ... . / -.-. --- -.. . / - .-. .- -. ... .-.. .- - --- .-.</span>
+    </h1>
+    <p id="app"></p>
+    <div class="flex-row justify-content-between">
+        <button type="button" class="btn custom-button p-2"><a href="morse.html">Morse > Letter</a></button>
+        <button type="button" class="btn custom-button p-2"><a href="letters.html">Letter > Morse</a></button>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

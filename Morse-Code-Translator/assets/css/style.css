@@ -1,0 +1,57 @@
+:root {
+    /* Colour Palette */
+    --dark-green: #61892F;
+    --light-green: #86C232;
+    --light-black: #222629;
+    --dark-grey: #474B4F;
+    --light-grey: #6B6E70;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #222629;
+}
+
+.custom-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.custom-button {
+    color: white;
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    margin: 10px;
+}
+
+.custom-container h1 {
+    color: var(--light-green);
+    /* font-family: 'Archivo', sans-serif; */
+}
+
+.custom-container h1 .morse-title {
+    display: none;
+}
+
+.custom-container h1:hover .letter-title {
+    display: none;
+}
+
+.custom-container h1:hover .morse-title {
+    display: inline;
+}
+
+.custom-container p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.typed {
+    color: var(--light-green);
+}

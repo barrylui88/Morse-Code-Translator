@@ -30,20 +30,40 @@ const morseCode = {
   "z": "--.."
 };
 
-function playMorseCode(message) {
-  for (const letter of message) {
-    const code = morseCode[letter.toLowerCase()];
-    for (const signal of code) {
-      if (signal === ".") {
+
+
+document.getElementById("play-btn").addEventListener("click", function() {
+  let input = document.getElementById("morse-txtbx").value.toLowerCase();
+  let code = "";
+  for (let i = 0; i < input.length; i++) {
+    if (morseCode[input[i]]) {
+      code += morseCode[input[i]] + " ";
+    }
+  }
+  playMorseCode(code);
+});
+
+function playMorseCode(code) {
+  let codeArr = code.split(" ");
+  let i = 0;
+  let interval = setInterval(function() {
+    if (i >= codeArr.length) {
+      clearInterval(interval);
+      return;
+    }
+    let currCode = codeArr[i];
+    for (let j = 0; j < currCode.length; j++) {
+      if (currCode[j] === ".") {
         ditSound.currentTime = 0;
         ditSound.play();
-      } else if (signal === "-") {
+      } else if (currCode[j] === "-") {
         dahSound.currentTime = 0;
         dahSound.play();
       }
-      
-      setTimeout(() => {}, 100);
     }
-    setTimeout(() => {}, 300);
-  }
+    i++;
+  }, 500);
 }
+
+
+

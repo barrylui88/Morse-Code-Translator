@@ -55,3 +55,8 @@ body {
 .typed {
     color: var(--light-green);
 }
+
+#api-section {
+    margin-top: 50px;
+    color: floralwhite;
+}

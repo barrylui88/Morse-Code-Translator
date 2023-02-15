@@ -7,6 +7,12 @@ console.log(lettersTxtBx)
 let morseTxtBx = $("#morse-txtbx")
 console.log(morseTxtBx)
 
+let saveBtn = $("#save-btn")
+console.log(saveBtn)
+
+let clearBtn = $("#clr-btn")
+console.log(clearBtn)
+
 let letters;
 
 // Take value from lettersTxtBx
@@ -22,3 +28,15 @@ translateBtn.click(function(){
 function refreshTxtBx(){
 morseTxtBx.val(translationLettersToMorse(readValue()))
 }
+
+// Saving lettersTxtBx
+
+// Create the clear_function
+function clearTxtBx() {
+    lettersTxtBx.val("");
+    morseTxtBx.val("");
+}
+// Clearing lettersTxtBx
+clearBtn.click(function(){
+clearTxtBx()
+})

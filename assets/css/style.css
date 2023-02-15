@@ -55,3 +55,21 @@ body {
 .typed {
     color: var(--light-green);
 }
+
+#api-section {
+    margin-top: 100px;
+    color: floralwhite;
+    padding: 20px;
+}
+
+#api-section h6 #date-morse, #api-section p #weather-morse {
+    display: none;
+}
+
+#api-section h6:hover #date, #api-section p:hover #weather {
+    display: none;
+}
+
+#api-section h6:hover #date-morse, #api-section p:hover #weather-morse {
+    display: inline;
+}

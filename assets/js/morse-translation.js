@@ -124,7 +124,7 @@ function translationLettersToMorse (lettersInput) {
         } else if (lettersInputSplit[i] === " ") {
             translatedOutputArray.push("/")
         } else {
-            translatedOutputArray.push("?")
+            translatedOutputArray.push(lettersInputSplit[i])
         }
     }
     translatedOutput = translatedOutputArray.join(" ");
@@ -248,10 +248,10 @@ function translationMorseToLetters (morseInput) {
         } else if (morseInputSplit[i] === "/") {
             translatedOutputArray.push(" ")
         } else {
-            translatedOutputArray.push("?")
+            translatedOutputArray.push(morseInputSplit[i])
         }
     }
-    translatedOutput = translatedOutputArray.join("");
+    translatedOutput = translatedOutputArray.join("").toUpperCase();
     return translatedOutput;
 }
 

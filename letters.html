@@ -18,7 +18,7 @@
 <body>
     <div class="custom-container d-flex flex-column justify-content-center align-items-center text-center">
         <section>
-            <div><button type="button" class="btn back-btn"><a href="./index.html">Back</a></button></div>
+            <div class="first"><button type="button" class="btn xbutton back-btn"><a href="./index.html">Back</a></button></div>
             <div>
                 <h1>Code Translator</h1>
                 <h2>Letters to Morse</h2>
@@ -32,9 +32,16 @@
                 <textarea id="morse-txtbx"></textarea>
             </div>
         </section>
-        <section>
+        <section class="bottom3">
+            
+            <div>
+                <button type="button" class="btn xbutton save-button" id="save-btn">Save</button>
+            </div>
             <div>
                 <button type="button" class="btn custom-button p-2" id="translate-btn">Translate</button>
+            </div>
+            <div>
+                <button type="button" class="btn xbutton clear-button" id="clr-btn">Clear</button>
             </div>
         </section>
     </div>

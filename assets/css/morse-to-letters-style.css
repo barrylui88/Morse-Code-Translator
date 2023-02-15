@@ -1,3 +1,12 @@
+:root {
+    /* Colour Palette */
+    --dark-green: #61892F;
+    --light-green: #86C232;
+    --light-black: #222629;
+    --dark-grey: #474B4F;
+    --light-grey: #6B6E70;
+}
+
 * {
     background-color: #222629;
     color: #86C232;
@@ -54,4 +63,19 @@
     margin-bottom: 10px;
     width:200px;
     height:5vh
+}
+
+.xbutton {
+    color: white;
+    background-color: var(--light-grey);
+    border-color: var(--light-grey);
+    margin: 5px 5px;   
+}
+
+.xbutton:hover {
+    background-color: #979899;
+}
+
+.xbutton:active {
+    box-shadow: inset -2px -2px 10px var(--light-black)
 }

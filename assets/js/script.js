@@ -5,7 +5,7 @@ var typewriter = new Typewriter(app, {
     loop: true
 });
 
-typewriter.typeString('Translate your message to letter')
+typewriter.typeString('Translate your message to letters')
     .pauseFor(2500)
     .deleteChars(6)
     .typeString('-- --- .-. ... .')
@@ -27,7 +27,11 @@ let responseTodayWind;
 let responseTodayHumidity;
 let homepageWeatherString;
 let homepageWeatherStringMorse;
+let homepageDateMorse
 let weatherText = $("#weather");
+let dateText = $("#date");
+let morseDateText = $("#date-morse")
+let morseWeatherText = $("#weather-morse")
 
 function callAPI () {
     // Today URL
@@ -42,11 +46,14 @@ function callAPI () {
         responseTodayHumidity = response["main"]["humidity"];
         homepageWeatherString = `The temperature in ${responseCityName} is ${Math.floor(responseTodayTemperature-273.15)}°C with a ${Math.floor(responseTodayWind)}km/h wind speed and ${responseTodayHumidity}% humidity.`
         homepageWeatherStringMorse = translationLettersToMorse(homepageWeatherString);
-        console.log(homepageWeatherString);
-        console.log(homepageWeatherStringMorse);
         weatherText.html(homepageWeatherString);
+        morseWeatherText.html(homepageWeatherStringMorse)
     })
 }
+
 callAPI();
 
 // Homepage Time API Call
+dateText.html(`Today is ${moment().format("dddd Do MMMM YYYY")}`);
+homepageDateMorse = translationLettersToMorse(`Today is ${moment().format("dddd Do MMMM YYYY")}`);
+morseDateText.html(homepageDateMorse);

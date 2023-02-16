@@ -77,7 +77,6 @@ function updateOutputBox () {
 
 function appendHistory(historyItem) {
 
-    console.log(history);
     if(history.length >= 3){
         history.shift();
     }
@@ -98,6 +97,7 @@ function createButton(stored) {
 
         button.classList.add('btn');
         button.classList.add('custom-button');
+        button.classList.add("saved-inputs")
         button.id= `button-${i}`
         historyButtons.append(button);
     }

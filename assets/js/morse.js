@@ -8,7 +8,7 @@ let nextLetterButton = $("#next-letter-input");
 let nextWordButton = $("#next-word-input");
 let saveButton = $("#save-button");
 let clearButton = $("#clear-button");
-let historyButtons = $("#history-buttons")
+let historyButtons = $("#history-buttons");
 
 // JS Variables
 let currentMorseInputArray = [];

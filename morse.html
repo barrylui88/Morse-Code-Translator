@@ -23,18 +23,25 @@
 
     <!-- Text Boxes -->
     <div id="text-boxes">
-        <input class="input-boxes" id="morse-input-box" placeholder="Press the buttons below to enter Morse Code here" readonly>
+        <input class="input-boxes" id="morse-input-box" placeholder="Press the buttons below to enter Morse Code here">
         <input class="input-boxes" id="letter-output-box" placeholder="Translation" readonly>
     </div>
 
     <!-- Text Input and Output Boxes -->
     <div id="input-buttons-section">
-        <button class="input-buttons" id="dot-input">.</button>
-        <button class="input-buttons" id="dash-input">-</button>
-        <button class="input-buttons" id="next-letter-input">Next Letter</button>
-        <button class="input-buttons" id="next-word-input">Next Word</button>
-        <button class="input-buttons" id="save-button">Save</button>
-        <button class="input-buttons" id="clear-button">Clear</button>
+        <div id="character-input-buttons-section">
+            <button class="character-input-buttons left-btn-margin btn" id="dot-input">.</button>
+            <button class="character-input-buttons right-btn-margin btn" id="dash-input">-</button>
+        </div>
+        <div id="separator-buttons-section">
+            <button class="separator-input-buttons left-btn-margin btn" id="next-letter-input">Next Letter</button>
+            <button class="separator-input-buttons right-btn-margin btn" id="next-word-input">Next Word</button>
+        </div>
+        <div id="interface-buttons-section">
+            <button class="interface-input-buttons left-btn-margin btn" id="save-button">Save</button>
+            <button class="interface-input-buttons right-btn-margin btn" id="clear-button">Clear</button>
+        </div>
+        
     </div>
 
     <!-- Bootstrap Links -->

@@ -12,6 +12,7 @@ let historyButtons = $("#history-buttons")
 let historyButton0;
 let historyButton1;
 let historyButton2;
+let historyButtons = $("#history-buttons");
 
 // JS Variables
 let currentMorseInputArray = [];

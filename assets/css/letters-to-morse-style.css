@@ -107,3 +107,7 @@ textarea {
     flex-direction: row;
     align-items: center;
 }
+
+.saved-input {
+    margin-bottom: 100px;
+}

@@ -3,6 +3,7 @@ let morseInputTextbox = $("#morse-input-box");
 let letterOutputTextbox = $("#letter-output-box");
 let dotInputButton = $("#dot-input");
 let dashInputButton = $("#dash-input");
+let backspaceButton = $("#backspace");
 let nextLetterButton = $("#next-letter-input");
 let nextWordButton = $("#next-word-input");
 let saveButton = $("#save-button");
@@ -22,6 +23,12 @@ dotInputButton.click(function () {
 
 dashInputButton.click(function () {
     currentMorseInputArray.push("-");
+    updateInputBox();
+    updateOutputBox();
+})
+
+backspaceButton.click(function () {
+    currentMorseInputArray.pop();
     updateInputBox();
     updateOutputBox();
 })

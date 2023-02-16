@@ -58,14 +58,6 @@
     justify-content: center;
 }
 
-/* .input-buttons {
-    background-color: #86C232;
-    color:white;
-    margin-bottom: 10px;
-    width:200px;
-    height:5vh
-} */
-
 .character-input-buttons {
     background-color: #86C232;
     color:white;
@@ -86,6 +78,10 @@
     color:white;
     margin-bottom: 10px;
     width:100px;
+}
+
+#backspace {
+    width: 120px;
 }
 
 a, a:hover {

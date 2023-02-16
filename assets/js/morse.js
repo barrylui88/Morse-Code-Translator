@@ -51,12 +51,9 @@ nextWordButton.click(function () {
 })
 
 saveButton.click(function () {
-    console.log(`It's saved`);
-
     let input = currentMorseInputString;
     let output = translatedLetterOutput;
     let historyItem = [input, output];
-    console.log(historyItem);
     appendHistory(historyItem);
 })
 
@@ -79,7 +76,6 @@ function updateOutputBox () {
 
 function appendHistory(historyItem) {
 
-    console.log(history);
     if(history.length >= 3){
         history.shift();
     }
@@ -87,24 +83,20 @@ function appendHistory(historyItem) {
     history.push(historyItem);
     localStorage.setItem("translateHistory", JSON.stringify(history));
     let stored = JSON.parse(localStorage.getItem("translateHistory"));
-    console.log(stored);
     createButton(stored);
 }
 
 function createButton(stored) {
     historyButtons.empty();
 
-    console.log("creating buttons");
     for (let i = 0; i < stored.length; i++) {
         
-        console.log("creating buttons II");
         let button = document.createElement('button');
         button.textContent = stored[i][0] + ` > ` + stored[i][1];
 
         button.classList.add('btn');
         button.classList.add('custom-button');
         button.id= `button-${i}`
-        console.log("buttons created");
         historyButtons.append(button);
     }
 

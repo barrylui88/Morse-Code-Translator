@@ -1,17 +1,12 @@
 let translateBtn = $("#translate-btn")
-console.log(translateBtn)
 
 let lettersTxtBx = $("#letters-txtbx")
-console.log(lettersTxtBx)
 
 let morseTxtBx = $("#morse-txtbx")
-console.log(morseTxtBx)
 
 let saveBtn = $("#save-btn")
-console.log(saveBtn)
 
 let clearBtn = $("#clr-btn")
-console.log(clearBtn)
 
 let letters;
 
@@ -37,12 +32,9 @@ morseTxtBx.val(translationLettersToMorse(readValue()))
 
 // Saving lettersTxtBx
 saveBtn.click(function () {
-    console.log(`It's saved`);
-
     let input = lettersTxtBx.val();
     let output = morseTxtBx.val();
     let historyItem = [input, output];
-    console.log(historyItem);
     appendHistory(historyItem);
 })
 
@@ -61,7 +53,6 @@ clearTxtBx();
 
 function appendHistory(historyItem) {
 
-    console.log(history);
     if(history.length >= 3){
         history.shift();
     }
@@ -75,10 +66,8 @@ function appendHistory(historyItem) {
 function createButton(stored) {
     historyButtons.empty();
 
-    console.log("creating buttons");
     for (let i = 0; i < stored.length; i++) {
         
-        console.log("creating buttons II");
         let button = document.createElement('button');
         button.textContent = stored[i][0] + ` > ` + stored[i][1];
 

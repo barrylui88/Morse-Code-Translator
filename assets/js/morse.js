@@ -51,6 +51,7 @@ nextWordButton.click(function () {
 })
 
 saveButton.click(function () {
+
     let input = currentMorseInputString;
     let output = translatedLetterOutput;
     let historyItem = [input, output];

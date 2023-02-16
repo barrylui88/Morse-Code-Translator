@@ -68,7 +68,7 @@ Another API has been used in this application, [openweather](https://openweather
 
 </br>
 
-<img src="./assets/img/readme-05-weather-time-API.jpg/" alt="current time and weather API" width="630px">
+<img src="./assets/img/readme-05-weather-time-API.jpg/" alt="current time and weather API" width="630px" />
 
 </br>
 </br>
@@ -87,11 +87,11 @@ The application works by taking the values from text boxes and saving them into 
 
 </br>
 
-<img src="./assets/img/readme-07-saved-translation.jpg/" alt="saved translation buttons" width="630px">
+<img src="./assets/img/readme-07-saved-translation.jpg/" alt="saved translation buttons" width="630px" />
 
 </br>
 
-<img src="./assets/img/readme-08-local-storage.jpg/" alt="local storage" width="630px">
+<img src="./assets/img/readme-08-local-storage.jpg/" alt="local storage" width="630px" />
 
 </br>
 </br>

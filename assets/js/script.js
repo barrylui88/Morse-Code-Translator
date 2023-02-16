@@ -7,7 +7,7 @@ var typewriter = new Typewriter(app, {
 
 typewriter.typeString('Translate your message to letters')
     .pauseFor(2500)
-    .deleteChars(6)
+    .deleteChars(7)
     .typeString('-- --- .-. ... .')
     .pauseFor(2500)
     .deleteAll()

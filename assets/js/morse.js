@@ -96,6 +96,7 @@ function createButton(stored) {
 
         button.classList.add('btn');
         button.classList.add('custom-button');
+        button.classList.add("saved-inputs")
         button.id= `button-${i}`
         historyButtons.append(button);
     }

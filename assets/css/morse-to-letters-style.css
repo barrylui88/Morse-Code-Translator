@@ -108,3 +108,7 @@ a, a:hover {
     border-color: var(--light-green);
     margin: 10px;
 }
+
+.saved-inputs {
+    margin-bottom: 100px;
+}

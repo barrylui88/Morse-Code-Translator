@@ -101,3 +101,10 @@ a, a:hover {
 .right-btn-margin {
     margin-left: 10px;
 }
+
+.custom-button {
+    color: white;
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    margin: 10px;
+}

@@ -9,13 +9,15 @@ let nextWordButton = $("#next-word-input");
 let saveButton = $("#save-button");
 let clearButton = $("#clear-button");
 let historyButtons = $("#history-buttons")
+let historyButton0;
+let historyButton1;
+let historyButton2;
 
 // JS Variables
 let currentMorseInputArray = [];
 let currentMorseInputString;
 let translatedLetterOutput;
 let history = [];
-
 
 // Event Listeners
 dotInputButton.click(function () {
@@ -62,7 +64,6 @@ clearButton.click(function () {
     currentMorseInputArray = [];
     updateInputBox();
     updateOutputBox();
-    historyButtons.empty();
 })
 
 // JavaScript Functions
@@ -86,6 +87,7 @@ function appendHistory(historyItem) {
     history.push(historyItem);
     localStorage.setItem("translateHistory", JSON.stringify(history));
     let stored = JSON.parse(localStorage.getItem("translateHistory"));
+    console.log(stored);
     createButton(stored);
 }
 
@@ -101,11 +103,57 @@ function createButton(stored) {
 
         button.classList.add('btn');
         button.classList.add('custom-button');
+        button.id= `button-${i}`
         console.log("buttons created");
-        // buttons.addEventListener('click', function (event) {
-        // 	morseInputTextbox.val(stored[i][0]);
-        //     letterOutputTextbox.val(stored[i][1]);
-        // });
         historyButtons.append(button);
+    }
+
+    for (i=0; i < history.length; i++) {
+        if (history.length === 1) {
+            historyButton0 = $("#button-0")
+            historyButton0.click(function () {
+                morseInputTextbox.val(JSON.parse(localStorage.getItem("translateHistory"))[0][0]);
+                currentMorseInputArray = morseInputTextbox.val().split("");
+                currentMorseInputString = currentMorseInputArray.join("");
+                updateOutputBox();
+            })
+        } else if (history.length === 2) {
+            historyButton0 = $("#button-0")
+            historyButton0.click(function () {
+                morseInputTextbox.val(JSON.parse(localStorage.getItem("translateHistory"))[0][0]);
+                currentMorseInputArray = morseInputTextbox.val().split("");
+                currentMorseInputString = currentMorseInputArray.join("");
+                updateOutputBox();            
+            })
+            historyButton1 = $("#button-1")
+            historyButton1.click(function () {
+                morseInputTextbox.val(JSON.parse(localStorage.getItem("translateHistory"))[1][0]);
+                currentMorseInputArray = morseInputTextbox.val().split("");
+                currentMorseInputString = currentMorseInputArray.join("");
+                updateOutputBox();            
+            })
+        } else if (history.length === 3) {
+            historyButton0 = $("#button-0")
+            historyButton0.click(function () {
+                morseInputTextbox.val(JSON.parse(localStorage.getItem("translateHistory"))[0][0]);
+                currentMorseInputArray = morseInputTextbox.val().split("");
+                currentMorseInputString = currentMorseInputArray.join("");
+                updateOutputBox();            
+            })
+            historyButton1 = $("#button-1")
+            historyButton1.click(function () {
+                morseInputTextbox.val(JSON.parse(localStorage.getItem("translateHistory"))[1][0]);
+                currentMorseInputArray = morseInputTextbox.val().split("");
+                currentMorseInputString = currentMorseInputArray.join("");
+                updateOutputBox();            
+            })
+            historyButton2 = $("#button-2")
+            historyButton2.click(function () {
+                morseInputTextbox.val(JSON.parse(localStorage.getItem("translateHistory"))[2][0]);
+                currentMorseInputArray = morseInputTextbox.val().split("");
+                currentMorseInputString = currentMorseInputArray.join("");
+                updateOutputBox();            
+            })
+        }
     }
 }

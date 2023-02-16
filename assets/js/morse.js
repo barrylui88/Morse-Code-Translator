@@ -8,7 +8,6 @@ let nextLetterButton = $("#next-letter-input");
 let nextWordButton = $("#next-word-input");
 let saveButton = $("#save-button");
 let clearButton = $("#clear-button");
-let historyButtons = $("#history-buttons")
 let historyButton0;
 let historyButton1;
 let historyButton2;

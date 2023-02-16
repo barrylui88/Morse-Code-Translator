@@ -39,7 +39,6 @@ function callAPI () {
         url: queryURLTop + queryTerm + queryURLBottom + APIKey,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
         responseCityName = `${response["name"]}, ${response["sys"]["country"]}`;
         responseTodayTemperature = response["main"]["temp"];
         responseTodayWind = response["wind"]["speed"];

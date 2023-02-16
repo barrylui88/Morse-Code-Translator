@@ -13,7 +13,7 @@ function translationLettersToMorse (lettersInput) {
     morseInputSplit = []
     translatedOutputArray = [];
     translatedOutput = "";
-    lettersInputSplit = (lettersInput || '').toLowerCase().split("");
+    lettersInputSplit = (lettersInput || "").toLowerCase().split("");
     for (i=0; i<lettersInputSplit.length; i++) {
         if (lettersInputSplit[i] === "a") {
             translatedOutputArray.push(".-")
@@ -134,7 +134,7 @@ function translationLettersToMorse (lettersInput) {
 translationLettersToMorse(userLettersInput);
 
 function translationMorseToLetters (morseInput) {
-    morseInputSplit = morseInput?.split("") || [];
+    morseInputSplit = morseInput?.split(" ") || [];
     lettersInputSplit = [];
     translatedOutputArray = [];
     translatedOutput = "";

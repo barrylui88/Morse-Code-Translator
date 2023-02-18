@@ -137,9 +137,10 @@ Moreover, the UI has also been designed to be responsive. Hence, this applicatio
 
 Installation not required, since this is a "plug and play" type of application. The user can simply run it locally by clicking on the `index.html` file and opening in either their default or preferred browser.
 
-Application can also be accessed at following links:
+Application and presentation video can also be accessed at following links:
 * [GitHub repository](https://github.com/barrylui88/Morse-Code-Translator).
 * [Deployed application](https://barrylui88.github.io/Morse-Code-Translator/).
+* [Presentation video](https://drive.google.com/file/d/1aLqrKbQ1n-3bKYQ0Nbw9MmEUCbPErgVX/view?usp=sharing).
 
 </br>
 </br>
